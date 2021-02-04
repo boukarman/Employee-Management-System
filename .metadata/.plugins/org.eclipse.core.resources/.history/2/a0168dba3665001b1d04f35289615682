@@ -1,0 +1,44 @@
+package application;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
+
+
+
+public class login {
+	
+	@FXML 
+	Label dbConlb;
+
+	public void statusDB(ActionEvent e) throws IOException,SQLException  {
+		if(!AdminsDB.getConnection().isClosed()) {
+			dbConlb.setText("connected");
+		}else {
+			dbConlb.setText("Not connected");
+			
+		}
+	}
+	
+	
+
+
+
+public void enterCP(ActionEvent e) throws IOException,SQLException  {
+	
+	List<Admins> list = AdminsDB.getAdmins();
+	
+	List<String> listusers = new ArrayList<String>();
+	List<String> listpwd = new ArrayList<String>();
+	Map<String,String> map = HashMap<String,String>();
+	
+}
+
+}

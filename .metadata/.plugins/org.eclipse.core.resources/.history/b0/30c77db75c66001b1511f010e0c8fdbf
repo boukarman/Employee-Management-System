@@ -1,0 +1,66 @@
+package application;
+
+import java.io.IOException;
+import java.text.ParseException;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+
+public class UpdateDelete {
+	
+	
+	@FXML
+	private TextField fname1;
+	@FXML
+	private TextField lname1;
+	@FXML
+	private TextField salary1;
+	@FXML
+	private TextField age1;
+	@FXML
+	private TextField department1;
+	@FXML
+	private TextField address1;
+	@FXML 
+	private TextField date_of_birth1;
+	@FXML
+	private TextField gender1;
+	@FXML
+	private TextField education1;
+	@FXML
+	private TextField contract_start1;
+	@FXML
+	private TextField contract_end1;
+	@FXML
+	private TextField nationality1;
+	
+	
+	public void getEmployeeById(ActionEvent e) throws IOException, ParseException{
+		
+		String sid = idEmployee.getText();
+		int id = Integer.parseInt(sid);
+		
+		Employee emp = DBInfo.getEmployeeId(id);
+		
+		
+		fname1.setText(emp.getFname());	
+		lname1.setText(emp.getLname());	
+		salary1.setText(String.valueOf(emp.getSalary()));
+		age1.setText(String.valueOf(emp.getAge()));	
+		department1.setText(String.valueOf(emp.getAge()));	
+		address1.setText(emp.getFname());	
+		gender1.setText(emp.getFname());	
+		education1.setText(emp.getFname());	
+		nationality1.setText(emp.getFname());	
+		
+		
+		
+	}
+	
+	
+	
+	
+
+}

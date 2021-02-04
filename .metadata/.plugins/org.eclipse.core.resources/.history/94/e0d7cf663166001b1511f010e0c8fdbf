@@ -1,0 +1,43 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+public class InsertEmployee {
+	
+	
+	@FXML
+	private TextField fname1;
+	@FXML
+	private TextField lname1;
+	@FXML
+	private TextField salary1;
+	@FXML
+	private TextField age1;
+	@FXML
+	private TextField department1;
+	@FXML
+	private TextField address1;
+	@FXML 
+	private TextField date_of_birth1;
+	@FXML
+	private TextField gender1;
+	@FXML
+	private TextField education1;
+	@FXML
+	private TextField contract_start1;
+	@FXML
+	private TextField contract_end1;
+	@FXML
+	private TextField nationality1;
+	
+	
+	
+	
+	
+	
+	
+
+}

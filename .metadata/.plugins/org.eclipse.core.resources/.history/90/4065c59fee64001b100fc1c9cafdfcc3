@@ -1,0 +1,20 @@
+package application;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javafx.event.ActionEvent;
+
+public class login {
+
+	public void statusDB(ActionEvent e) throws IOException,SQLException  {
+		if(!AdminsDB.getConnection().isClosed()) {
+			System.out.println();
+		}else {
+			
+			
+		}
+	}
+	
+	
+}

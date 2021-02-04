@@ -1,0 +1,65 @@
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
+public class ViewEmployees implements Initializable {
+	
+	
+	
+	@FXML
+	private TableView<Employee>table;
+	@FXML
+	private TableColumn<Employee,Integer>id;
+	@FXML
+	private TableColumn<Employee,Integer>fname;
+	@FXML
+	private TableColumn<Employee,Integer>lname;
+	@FXML
+	private TableColumn<Employee,Float>salary;
+	@FXML
+	private TableColumn<Employee,Integer>age;
+	@FXML
+	private TableColumn<Employee,String>departement;
+	@FXML
+	private TableColumn<Employee,String>address;
+	@FXML 
+	private TableColumn<Employee,String>date_of_birth;
+	
+	/*
+	
+	@FXML
+	private TableColumn<Employee,String>contract_start;
+	@FXML
+	private TableColumn<Employee,String>contract_end;
+	@FXML
+	private TableColumn<Employee,String>nationality;  */
+
+	public ObservableList<Employee> data = FXCollections.observableArrayList();
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+		
+	
+	
+
+}

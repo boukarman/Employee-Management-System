@@ -1,0 +1,65 @@
+package application;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
+
+
+
+public class login {
+	
+	@FXML 
+	Label dbConlb;
+
+	public void statusDB(ActionEvent e) throws IOException,SQLException  {
+		if(!AdminsDB.getConnection().isClosed()) {
+			dbConlb.setText("connected");
+		}else {
+			dbConlb.setText("Not connected");
+			
+		}
+	}
+	
+	
+
+
+
+public void enterCP(ActionEvent e) throws IOException,SQLException  {
+	
+	List<Admins> list = AdminsDB.getAdmins();
+	
+	List<String> listusers = new ArrayList<String>();
+	List<String> listpwd = new ArrayList<String>();
+	Map<String,String> map = new HashMap<String,String>();
+	
+	for(Admins a:list) {
+		
+		//listusers.add(a.getUsername());
+		//listpwd.add(a.getPassword());
+		map.put.add(a.getUsername(), a.getPassword());
+	}
+	
+	if(map.containsKey(tf1.getText())) {
+		
+		
+		String val2 = map.get(tf1.getText());
+		
+		if (val2.equals(tf2.getText())) {
+			
+			Ib4.setText("Success");
+		}
+	}
+	
+	
+	
+}
+
+}

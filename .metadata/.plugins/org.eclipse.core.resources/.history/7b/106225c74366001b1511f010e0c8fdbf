@@ -1,0 +1,111 @@
+package application;
+
+import java.io.IOException;
+import java.time.LocalDate;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+public class InsertEmployee {
+	
+	
+	@FXML
+	private TextField fname1;
+	@FXML
+	private TextField lname1;
+	@FXML
+	private TextField salary1;
+	@FXML
+	private TextField age1;
+	@FXML
+	private TextField department1;
+	@FXML
+	private TextField address1;
+	@FXML 
+	private DatePicker date_of_birth1;
+	@FXML
+	private TextField gender1;
+	@FXML
+	private TextField education1;
+	@FXML
+	private DatePicker contract_start1;
+	@FXML
+	private DatePicker contract_end1;
+	@FXML
+	private TextField nationality1;
+	
+	
+	
+	
+	public void insertData(ActionEvent e) throws IOException{
+		
+		LocalDate dateberith = date_of_birth1.getValue();
+		LocalDate datecontract_start = contract_start1.getValue();
+		LocalDate datecontract_end = contract_end1.getValue();
+		
+		
+		String firstName = fname1.getText();
+		String lastName = lname1.getText();
+		String textSalary = salary1.getText();
+		String textAge = age1.getText();
+		String textDepartment = department1.getText();
+		String textAddress = address1.getText();
+		String textGender = gender1.getText();
+		String textEducation = education1.getText();
+		String textNationality = nationality1.getText();
+		
+		String dateOfBirth = dateberith.toString();
+		String textContractstart = datecontract_start.toString();
+		String textContractend = datecontract_end.toString();
+		
+		
+		float fSalary = Float.parseFloat(textSalary);
+		int iAge = Integer.parseInt(textAge);
+		
+		Employee emp = new Employee();
+		
+		
+		emp.setFname(firstName);
+		emp.setLname(lastName);
+		emp.setSalary(fSalary);
+		emp.setAge(iAge);
+		emp.setDepartment(textDepartment);
+		emp.setAddress(textAddress);
+		emp.setDate_of_birth(dateOfBirth);
+		emp.setGender(textGender);
+		emp.setEducation(textEducation);
+		emp.setContract_start(textContractstart);
+		emp.setContract_end(textContractend);
+		emp.setNationality(textNationality);
+		
+		
+	}
+	
+	
+	
+	
+	public void resetField(ActionEvent e) throws IOException{
+		
+		fname1.setText("");	
+		lname1.setText("");
+		salary1.setText("");
+		department1.setText("");
+		address1.setText("");
+		gender1.setText("");
+		education1.setText("");
+		nationality1.setText("");
+   	
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

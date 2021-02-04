@@ -1,0 +1,39 @@
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
+
+public class ViewEmployees implements Initializable {
+	
+	
+	
+	@FXML
+	private TableView<Employee>table;
+	@FXML
+	private TableColumn<Employee,Integer>id;
+
+
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+		
+	
+	
+
+}

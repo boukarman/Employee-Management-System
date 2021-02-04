@@ -1,0 +1,27 @@
+package application;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+
+public class AdminsDB {
+
+	
+	static Connection con = null;
+	
+	public static Connection getConnection() {
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost/company";
+			con = DriverManager.getConnection(url,"admin","admin");
+			System.out.println("connected");
+			
+		}
+		
+		
+	}
+	
+	
+}
