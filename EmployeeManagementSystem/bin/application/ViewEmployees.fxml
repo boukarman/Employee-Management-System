@@ -9,7 +9,7 @@
    <children>
       <AnchorPane prefHeight="473.0" prefWidth="822.0">
          <children>
-           <TableView fx:id="table" editable="true" layoutY="77.0" prefHeight="321.0" prefWidth="833.0" tableMenuButtonVisible="true">
+           <TableView fx:id="table" editable="true" layoutY="77.0" prefHeight="503.0" prefWidth="1195.0" tableMenuButtonVisible="true">
               <columns>
                 <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="fname" prefWidth="75.0" text="First Name" />
@@ -24,7 +24,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Label layoutX="403.0" layoutY="34.0" text="Employee View" />
+            <Label layoutX="545.0" layoutY="36.0" text="Employee View" />
          </children>
       </AnchorPane>
    </children>
